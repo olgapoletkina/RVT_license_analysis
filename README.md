@@ -1,40 +1,83 @@
 # Revit License Usage Analysis
 
-This project aims to analyze Revit license usage patterns within the company to determine the optimal number of licenses required. By examining data on employee login and logout times from license logs, we can identify key users and trends in Revit software usage across different days and times.
+This project analyzes Revit license usage within our company to enable **data-driven decisions** about license purchasing, optimize costs, and ensure uninterrupted access for key users.  
+By examining employee login/logout patterns across months, we identified usage clusters, optimized license allocation, and quantified potential annual savings.
+
+---
 
 ## Project Goals
-The primary goal is to assist the company in making informed decisions regarding Revit license purchases. Specifically, we aim to:
 
-- Identify top users and frequent Revit usage patterns.
-- Analyze workday structures, including start, end, and duration of Revit sessions.
-- Determine the minimum number of licenses required based on current usage patterns.
+- **Identify power users, shared users, and rare users of Revit**
+- **Visualize usage patterns**: per user, per month
+- **Recommend the optimal number of licenses** required for business needs
+- **Estimate the cost impact** of a data-driven license strategy
+
+---
 
 ## Methodology
-1. **Data Collection**: License logs were parsed to capture relevant timestamps and actions (IN, OUT, DENIED) for Revit license usage.
-2. **Data Cleaning and Transformation**: The raw log data was processed to extract date, time, user ID, license status, and other key information. This step involved removing unnecessary information and standardizing the data format.
-3. **Data Analysis**: Several analyses were performed to understand Revit usage patterns:
-   - **Unique Daily Users**: Counted the unique users each day to understand daily demand.
-   - **Top Users Identification**: Analyzed individual users' frequency and duration of Revit usage to identify key users.
-   - **Workday Analysis**: Examined typical start and end times and the duration of Revit usage per user to estimate peak and average demand.
-   - **Cost Analysis**: Estimated the cost of Revit licenses per user session based on different usage frequencies.
 
-## Results
-- Identified the top users based on the frequency and duration of Revit usage.
-- Calculated the minimum number of licenses required to meet demand, with recommendations based on usage patterns.
-- Provided insights on the correlation between usage frequency and duration, aiding decision-making for license procurement.
+1. **Data Collection & Processing**
+   - Parsed Revit license logs to extract user activity (logins, logouts, denials).
+   - Cleaned and transformed raw logs to structured data (user ID, session times, usage duration).
+
+2. **Analysis**
+   - Aggregated usage **per user, per month** to account for real project work cycles.
+   - Calculated total, average, and active months per user.
+   - Classified users into:
+     - **Dedicated:** Regular, heavy Revit users needing full-time access.
+     - **Shared:** Moderate, periodic users who can share licenses.
+     - **Rare:** Occasional users suitable for floating or temporary licenses.
+   - Simulated various license pooling strategies (e.g., shared pool at 50% concurrency).
+
+3. **Business Impact**
+   - Compared the current “all-users” license model with the optimized allocation.
+   - Quantified potential **annual savings** by switching to an optimized license plan.
+
+---
+
+## Key Results
+
+- **Clear segmentation of user base**: Dedicated (full-time), Shared (pool), and Rare users.
+- **Optimal license allocation** can reduce annual license costs by over 49% while maintaining productivity for core staff.
+- **Data-driven recommendations** help avoid over-purchasing and under-provisioning.
+
+---
 
 ## Key Visualizations
-The analysis includes:
 
-- Daily counts of unique users.
-- Histograms and box plots showing the distribution of Revit usage frequencies among employees.
-- Scatter plots highlighting the correlation between average daily usage duration and usage frequency.
+**1. License Recommendation Distribution**
+
+![License Recommendation Distribution](img/licence_rec_distr.png)
+
+**2. Recommended License Allocation**
+
+![Recommended License Allocation](img/recom_l_allocation.png)
+
+**3. User Classification by Average Monthly Hours and Active Months**
+
+![User Classification](img/user_classification_by_avg_m_h_and_act_m.png)
+
+**4. Annual Revit License Cost Saving**
+
+![Annual Cost Saving](img/annual_RVT_l_cost_saving.png)
+
+---
+
+## Example Business Impact
+
+- **Dedicated users:** 90 (need full-time licenses)
+- **Shared users:** 43 (can share ~21 licenses)
+- **Rare users:** 86 (can use floating or guest licenses)
+- **Total licenses recommended:** 111  
+- **Annual cost (current):** €723,357  
+- **Annual cost (optimized):** €366,633  
+- **Estimated annual savings:** **€356,724**
+
+---
 
 ## Next Steps
-To improve the accuracy and relevance of these insights, the following steps are recommended:
 
-- **Role Analysis**: Classify users by their roles (e.g., architect, engineer) to determine if usage patterns vary by role.
-- **Project Stage Analysis**: Analyze usage by project stages (e.g., design, detailing) to account for changes in Revit needs over time.
-- **Predictive Modeling**: Develop models to forecast hourly or daily license requirements based on historical trends.
+- Incorporate user role/project information for even more accurate forecasting.
+- Automate monthly reporting for ongoing optimization.
+- Expand analysis to other design software for complete license management.
 
-This analysis provides actionable insights that can help the company make data-driven decisions regarding Revit license purchases, balancing cost with operational needs.
