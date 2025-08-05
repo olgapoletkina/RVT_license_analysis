@@ -51,27 +51,11 @@ By examining employee login/logout patterns across months, we identified usage c
 
 **2. Recommended License Allocation**
 
-![Recommended License Allocation](img/recom_l_allocation.png)
+![Recommended License Allocation](img/l_alloc_before_after.png)
 
 **3. User Classification by Average Monthly Hours and Active Months**
 
 ![User Classification](img/user_classification_by_avg_m_h_and_act_m.png)
-
-**4. Annual Revit License Cost Saving**
-
-![Annual Cost Saving](img/annual_RVT_l_cost_saving.png)
-
----
-
-## Example Business Impact
-
-- **Dedicated users:** 90 (need full-time licenses)
-- **Shared users:** 43 (can share ~21 licenses)
-- **Rare users:** 86 (can use floating or guest licenses)
-- **Total licenses recommended:** 111  
-- **Annual cost (current):** €723,357  
-- **Annual cost (optimized):** €366,633  
-- **Estimated annual savings:** **€356,724**
 
 ---
 
